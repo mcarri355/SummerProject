@@ -1,0 +1,52 @@
+// Font
+@font-face {
+    font-family: 'Cherry';
+    src: url(../../fonts/CherryBombOne-Regular.ttf);
+}
+
+// Colors
+$Main-Color: #FF8A00;
+$Secondary-Color: White;
+$Tertiary-Color: #1EB9C3;
+
+// Stroke
+// $Orange-Stroke: 
+// $White-Stroke: -webkit-text-stroke: 2px $Secondary-Color;
+nav{
+    display: flex;
+
+    #navTitle{
+        font-family: 'Cherry';
+        font-size: 3rem;
+        color: $Secondary-Color;
+        -webkit-text-stroke: 3.25px $Main-Color;
+    }
+    
+    .menuBurger{
+        .bar1, .bar2, .bar3{
+            width: 35px;
+            height: 5px;
+            background-color: $Main-Color;
+            margin: 6px 0;
+            transition: 0.4s; 
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

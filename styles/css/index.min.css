@@ -1,0 +1,1 @@
+@font-face{font-family:"Cherry";src:url(../../fonts/CherryBombOne-Regular.ttf)}nav{display:flex}nav #navTitle{font-family:"Cherry";font-size:3rem;color:#fff;-webkit-text-stroke:3.25px #ff8a00}nav .menuBurger .bar1,nav .menuBurger .bar2,nav .menuBurger .bar3{width:35px;height:5px;background-color:#ff8a00;margin:6px 0;transition:.4s}
