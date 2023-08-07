@@ -6,16 +6,37 @@
     <title>My Summer | Home Page</title>
     <link rel="stylesheet" href="./styles/css/index.css">
 </head>
-<body>
+<body class="indexBody">
     <nav>
         <div id="navTitle">
             My Summer
         </div>
-        <div class="menuBurger">
+        <div class="menuBurger" onclick="menu(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
     </nav>
+    <script src="./scripts/menu.js"></script>
+    <section class="indexContent">
+        <div class="test">
+            <a href="./html/camping.html">
+                <img src="./photos/scrapBook.webp" alt="" class="book">
+                <p>Camping Scrapbook</p>
+            </a>
+        </div>
+        <div>
+            <a href="./html/videoGame.html">
+                <img src="./photos/scrapBook.webp" alt="" class="book">
+                <p>Game Scrapbook</p>
+            </a>
+        </div>
+        <div>
+            <a href="./html/job.html">
+                <img src="./photos/scrapBook.webp" alt="" class="book">
+                <p>Job Scrapbook</p>
+            </a>
+        </div>
+    </section>
 </body>
 </html>
