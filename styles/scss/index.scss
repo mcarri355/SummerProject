@@ -32,6 +32,7 @@ $Tertiary-Color: #1EB9C3;
 // Nav Bar
 nav{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: {
@@ -81,7 +82,7 @@ nav{
 .flipBookContainer{
     display: flex;
     height: 80vh;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -254,9 +255,176 @@ i{
     background-size: 20%;
 }
 
+@media only screen and (max-width: 900px){
+    .flipBook {
+            position: relative;
+            width: 20rem;
+            height: 35rem;
+            transition: transform 0.5s;
+        }
 
+        .bookTitle{
+            font-family: 'Cherry';
+            font-size: 2.5rem;
+            text-align: center;
+            color: $Tertiary-Color;
+            -webkit-text-stroke: 1px $Main-Color;
+        }
 
+    .flipBookContent{
+        font-size: 1rem;
+    }
 
+                nav {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+        
+                    margin: {
+                        left: 1%;
+                        right: 1%;
+                        bottom: 3rem;
+                    }
+        
+                    ;
+        
+                    #navTitle {
+                        font-family: 'Cherry';
+                        font-size: 2.5rem;
+                        color: $Secondary-Color;
+                        -webkit-text-stroke: 3.25px $Main-Color;
+                    }
+        
+                    .fa-arrows-rotate {
+                        font-size: 2.5rem;
+                        cursor: pointer;
+                        color: $Main-Color;
+                    }
+        
+                    div {
+                        display: flex;
+                        gap: 5px;
+        
+                        .menuBtn {
+                            font-family: 'Cherry';
+                            color: black;
+                            cursor: pointer;
+                            font-size: .75rem;
+                            background-color: transparent;
+                            border: 5px solid $Main-Color;
+                            border-radius: 20px;
+        
+                            padding: {
+                                left: 20px;
+                                right: 20px;
+                                top: 10px;
+                                bottom: 10px;
+                            }
+        
+                            ;
+        
+                            &:hover {
+                                background-color: black;
+                                color: $Main-Color;
+                                border-color: black;
+                            }
+                        }
+                    }
+                }
+
+}
+
+@media only screen and (max-width: 700px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexHtml{
+        height: 150vh;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+
+        .flipBook {
+            position: relative;
+            width: 10rem;
+            height: 25rem;
+            transition: transform 0.5s;
+        }
+    
+        .bookTitle {
+            font-family: 'Cherry';
+            font-size: 1.75rem;
+            text-align: center;
+            color: $Tertiary-Color;
+            -webkit-text-stroke: 1px $Main-Color;
+        }
+    
+        .flipBookContent {
+            font-size: .75rem;
+        }
+
+        .flipBookContainer{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+@media only screen and (max-width: 450px) {
+
+    .flipBook {
+        position: relative;
+        width: 8rem;
+        height: 25rem;
+        transition: transform 0.5s;
+    }
+
+    .bookTitle {
+        font-family: 'Cherry';
+        font-size: 1.25rem;
+        text-align: center;
+        color: $Tertiary-Color;
+        -webkit-text-stroke: 1px $Main-Color;
+    }
+
+    .flipBookContent {
+        font-size: .75rem;
+    }
+
+    .flipBookContainer {
+        display: flex;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .flipBook {
+        position: relative;
+        width: 6rem;
+        height: 25rem;
+        transition: transform 0.5s;
+    }
+
+    .bookTitle {
+        font-family: 'Cherry';
+        font-size: 1rem;
+        text-align: center;
+        color: $Tertiary-Color;
+        -webkit-text-stroke: 1px $Main-Color;
+    }
+
+    .flipBookContent {
+        font-size: .50rem;
+    }
+}
 
 
 

@@ -15,8 +15,8 @@ let maxLocation =  numOfPapers + 1;
 
 function openBook(){
     flipBook.style.transform = 'translateX(50%)'
-    prevBtn.style.transform = 'translateX(-17.5rem)'
-    nextBtn.style.transform = 'translateX(17.5rem)'
+    prevBtn.style.transform = 'translateX(-175%)'
+    nextBtn.style.transform = 'translateX(175%)'
 }
 
 function closeBook(isAtBeginning){
