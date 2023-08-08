@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Project | Video Game</title>
+    <link rel="stylesheet" href="../styles/css/index.css">
+    <script src="https://kit.fontawesome.com/4149d3fa01.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="gameBody">
+    <nav>
+        <a href="../index.html" id="navTitle">My Summer</a>
+        <div>
+            <button class="menuBtn" onclick="window.location.href='./camping.html';">Camping</button>
+            <button class="menuBtn" onclick="window.location.href='./videoGame.html';">Games</button>
+            <button class="menuBtn" onclick="window.location.href='./job.html';">Job</button>
+            <i class="fa-solid fa-arrows-rotate" onclick="imageSwap()"></i>
+        </div>
+    </nav>
+    <section class="flipBookContainer">
+        <button id="prevBtn" class="bookButton">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </button>
+        <div id="flipBook" class="flipBook">
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="frontContent">
+                        <h1 class="bookTitle">What I Played</h1>
+                        <img src="../photos/gameFlip1.webp" alt="" class="flipBookPhoto">
+                        <h1 class="bookTitle">Over Summer Break</h1>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="backContent">
+                        <img src="../photos/gameFlip2.avif" alt="" class="flipBookPhoto" width="">
+                        <img src="../photos/gameFlip3.jpg" alt="" class="flipBookPhoto">
+                    </div>
+                </div>
+            </div>
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="frontContent">
+                        <h1 class="textCenter">Over the summer I got a PS5 so I played Spiderman Remastered and Spiderman Miles Morales. As well as NBA 2k23 next gen. I also plan to play all of the god of wars in order as well as play ghost of tsushima. I have never really been into singleplayer games but i heard all of these games are all really good so we'll see. But in all reality i just bought the ps5 for spiderman 2.</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="backContent">
+                        <img src="../photos/gameFlip4.jpg" alt="" class="flipBookPhoto" width="">
+                        <img src="../photos/gameFlip5.jpg" alt="" class="flipBookPhoto">
+                    </div>
+                </div>
+            </div>
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="frontContent">
+                        <h1 class="textCenter">At the same time I also began to replay Rocket League and Rainbow 6 Siege, two games that I played a lot in previous years but stopped playing them. I hope to hit plat in r6 and champ in rocket league in the next few weeks.</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="backContent">
+                        <img src="../photos/gameFlip7.PNG" alt="" class="flipBookPhoto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="nextBtn" class="bookButton">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+    </section>
+    <script src="../scripts/imageSwap.js"></script>
+    <script src="../scripts/flipbook.js"></script>
+</body>
+
+</html>

@@ -5,18 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Project | Camping</title>
     <link rel="stylesheet" href="../styles/css/index.css">
+    <script src="https://kit.fontawesome.com/4149d3fa01.js" crossorigin="anonymous"></script>
 </head>
-<body class="campingBody">
+<body id="campingBody">
     <nav>
-        <div id="navTitle">
-            My Summer
-        </div>
-        <div class="menuBurger" onclick="menu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+        <a href="../index.html" id="navTitle">My Summer</a>
+        <div>
+            <button class="menuBtn" onclick="window.location.href='./camping.html';">Camping</button>
+            <button class="menuBtn" onclick="window.location.href='./videoGame.html';">Games</button>
+            <button class="menuBtn" onclick="window.location.href='./job.html';">Job</button>
+            <i class="fa-solid fa-arrows-rotate" onclick="imageSwap()"></i>
         </div>
     </nav>
-    <script src="../scripts/menu.js"></script>
+    <section class="flipBookContainer">
+        <button id="prevBtn" class="bookButton">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </button>
+        <div id="flipBook" class="flipBook">
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="frontContent">
+                        <h1 class="bookTitle">My Camping</h1>
+                        <img src="../photos/campFlip2.JPG" alt="" class="flipBookPhoto">
+                        <h1 class="bookTitle">Adventures</h1>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="backContent">
+                        <img src="../photos/campFlip7.PNG" alt="" class="flipBookPhoto" width="">
+                    </div>
+                </div>
+            </div>
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="frontContent">
+                        <h1 class="textCenter">I went camping with some of my closest family and friends in Sedona, Arizona. We camped at a place called Cave Springs Campground in Coconino National Forest. We have come camping here every year in june for around the last 20 years. (I had a rough couple of days) </h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="backContent">
+                        <video src="../photos/campFlip8.mp4" class="flipBookPhoto" muted autoplay loop></video>
+                    </div>
+                </div>
+            </div>
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="frontContent">
+                        <h1 class="textCenter">At The Campground there is a creek that is absolutely freezing. There is also a trail that will take you to a cliff jumping area in which you will regret and not regret jumping off of at the same time. </h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="backContent">
+                        <img src="../photos/campFlip6.JPG" alt="" class="flipBookPhoto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="nextBtn" class="bookButton">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+    </section>
+    <script src="../scripts/imageSwap.js"></script>
+    <script src="../scripts/flipbook.js"></script>
 </body>
 </html>

@@ -1,11 +1,23 @@
+
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
 }
 
 html{
     height: 100%;
-
 }
+
+body{
+    height: 100vh;
+}
+
+
 // Font
 @font-face {
     font-family: 'Cherry';
@@ -17,9 +29,7 @@ $Main-Color: #FF8A00;
 $Secondary-Color: White;
 $Tertiary-Color: #1EB9C3;
 
-// Stroke
-// $Orange-Stroke: 
-// $White-Stroke: -webkit-text-stroke: 2px $Secondary-Color;
+// Nav Bar
 nav{
     display: flex;
     justify-content: space-between;
@@ -27,8 +37,7 @@ nav{
     margin: {
         left: 1%;
         right: 1%;
-        bottom: 8rem
-
+        bottom: 3rem;
     };
     #navTitle{
         font-family: 'Cherry';
@@ -36,52 +45,166 @@ nav{
         color: $Secondary-Color;
         -webkit-text-stroke: 3.25px $Main-Color;
     }
-    
-    .menuBurger{
-        .bar1, .bar2, .bar3{
-            width: 3rem;
-            height: .5rem;
-            background-color: $Main-Color;
-            margin: 6px 0;
-            transition: 0.4s; 
+    .fa-arrows-rotate{
+        font-size: 3rem;
+        cursor: pointer;
+        color: $Main-Color;
+    }
+
+    div{
+        display: flex;
+        gap: 5px;
+        .menuBtn{
+            font-family: 'Cherry';
+            color: black;
+            cursor: pointer;
+            font-size: 1rem;
+            background-color: transparent;
+            border: 5px solid $Main-Color;
+            border-radius: 20px;
+            padding: {
+                left: 20px;
+                right: 20px;
+                top: 10px;
+                bottom: 10px;
+            };
+            &:hover{
+                background-color: black;
+                color: $Main-Color;
+                border-color: black;
+            }
         }
     }
 }
 
-.change .bar1 {
-    transform: translate(0, 13px) rotate(-45deg);
+// Flipbook
+.flipBookContainer{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.change .bar2 {
-    opacity: 0;
+.flipBook{
+    position: relative;
+    width: 35rem;
+    height: 50rem;
+    transition: transform 0.5s;
 }
 
-.change .bar3 {
-    transform: translate(0, -13px) rotate(45deg);
+.paper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
 }
 
-.indexBody{
-    background: url(../../photos/index1.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.front, .back{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: .5s;
 }
 
-.indexContent{
+.front{
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.back{
+    z-index: 0;
+}
+
+.frontContent, .backContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.backContent{
+    transform: rotateY(180deg);
+}
+
+.flipped .front, .flipped .back{
+    transform: rotateY(-180deg);
+}
+
+.bookButton{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+    &:focus{
+        outline: none;
+    }
+    &:hover i{
+        color: $Tertiary-Color;
+    }
+}
+
+i{
+    font-size: 3rem;
+    color: lightgray;
+    
+}
+
+#p1{
+    z-index: 3;
+}
+
+#p2{
+    z-index: 2;
+}
+
+#p3{
+    z-index: 1;
+}
+
+.bookTitle{
+    font-family: 'Cherry';
+    font-size: 4.5rem;
+    text-align: center;
+    color: $Tertiary-Color;
+    -webkit-text-stroke: 1px $Main-Color;
+}
+
+.flipBookPhoto{
+    width:90%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.indexContent {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
+    height: 80vh;
     justify-content: space-around;
     align-items: center;
-    div{
-        a{
+
+    div {
+        a {
             text-decoration: none;
+
             .book {
                 width: 20rem;
                 height: 20rem;
-                }
-            p{
+            }
+
+            p {
                 font-family: 'Cherry';
                 font-size: 2.5rem;
                 text-align: center;
@@ -92,15 +215,44 @@ nav{
     }
 }
 
+// Index Page
+#indexBody {
+    background-image: url(../../photos/index1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+// Camping Page
+#campingBody {
+    background-image: url(../../photos/camping1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+// Gaming Page
+#gameBody{
+    background-image: url(../../photos/game1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
-
-
-
-
-
-
+// Job Page
+#jobBody {
+    background-image: url(../../photos/job1.png);
+    background-size: 20%;
+}
 
 
 

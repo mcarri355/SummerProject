@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Project | Job</title>
+    <link rel="stylesheet" href="../styles/css/index.css">
+    <script src="https://kit.fontawesome.com/4149d3fa01.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body id="jobBody">
+    <nav>
+        <a href="../index.html" id="navTitle">My Summer</a>
+        <div>
+            <button class="menuBtn" onclick="window.location.href='./camping.html';">Camping</button>
+            <button class="menuBtn" onclick="window.location.href='./videoGame.html';">Games</button>
+            <button class="menuBtn" onclick="window.location.href='./job.html';">Job</button>
+            <i class="fa-solid fa-arrows-rotate" onclick="imageSwap()"></i>
+        </div>
+    </nav>
+    <section class="flipBookContainer">
+        <button id="prevBtn" class="bookButton">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </button>
+        <div id="flipBook" class="flipBook">
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="frontContent">
+                        <h1 class="bookTitle">I Got A Job</h1>
+                        <img src="../photos/jobFlip4.jpg" alt="" class="flipBookPhoto">
+                        <h1 class="bookTitle">At Dairy Queen</h1>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="backContent">
+                        <img src="../photos/jobFlip1.jpg" alt="" class="flipBookPhoto" width="">
+                    </div>
+                </div>
+            </div>
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="frontContent">
+                        <h1 class="textCenter">Over the summer I got a job working at a Dairy Queen which a family friend owns. I usually work the night shift and have to end up closing which sucks but at least I am making slightly above minimum wage to flip ice cream and clean tables. My favorite part of the job is definitely making sundaes idk why i like it so much. I also like going home and taking any ice cream we messed up on home for free.</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="backContent">
+                        <img src="../photos/jobFlip5.jpg" alt="" class="flipBookPhoto" width="">
+                    </div>
+                </div>
+            </div>
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="frontContent">
+                        <h1 class="textCenter">My least favorite part about the job is most definitely closing dishes mostly due to the fact that it takes forever especially if you are slow like me and it can smell really bad which is unfortunate because I have a strong sense of smell. So if i can wiggle my way out of dishes best believe im doing it.</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="backContent">
+                        <img src="../photos/jobFlip2.webp" alt="" class="flipBookPhoto">
+                        <p class="textCenter">I dont have any pictures of me actually working this is the best I got</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="nextBtn" class="bookButton">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+    </section>
+    <script src="../scripts/imageSwap.js"></script>
+    <script src="../scripts/flipbook.js"></script>
+    
+</body>
+
+</html>
