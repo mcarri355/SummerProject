@@ -10,7 +10,7 @@ a{
 }
 
 html{
-    height: 100%;
+    height: 110vh;
 }
 
 body{
@@ -38,7 +38,7 @@ nav{
     margin: {
         left: 1%;
         right: 1%;
-        bottom: 3rem;
+        bottom: 2rem;
     };
     #navTitle{
         font-family: 'Cherry';
@@ -81,6 +81,7 @@ nav{
 // Flipbook
 .flipBookContainer{
     display: flex;
+    margin-top: 5rem;
     height: 80vh;
     justify-content: space-evenly;
     align-items: center;
@@ -203,6 +204,10 @@ i{
             .book {
                 width: 20rem;
                 height: 20rem;
+                transition: 10s all;
+                &:hover{
+                    zoom: 1.2;
+                }
             }
 
             p {
@@ -346,6 +351,32 @@ i{
     }
 }
 
+.indexContent {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        a {
+            text-decoration: none;
+
+            .book {
+                width: 15rem;
+                height: 15rem;
+            }
+
+            p {
+                font-family: 'Cherry';
+                font-size: 1.75rem;
+                text-align: center;
+                color: $Main-Color;
+                -webkit-text-stroke: 2px $Secondary-Color;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 675px) {
 
         .flipBook {
@@ -402,6 +433,64 @@ i{
         justify-content: center;
         align-items: center;
     }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+    
+            margin: {
+                left: 1%;
+                right: 1%;
+                bottom: 3rem;
+            }
+    
+            ;
+    
+            #navTitle {
+                font-family: 'Cherry';
+                font-size: 2rem;
+                color: $Secondary-Color;
+                -webkit-text-stroke: 3.25px $Main-Color;
+            }
+    
+            .fa-arrows-rotate {
+                font-size: 2.75rem;
+                cursor: pointer;
+                color: $Main-Color;
+            }
+    
+            div {
+                display: flex;
+                gap: 5px;
+    
+                .menuBtn {
+                    font-family: 'Cherry';
+                    color: black;
+                    cursor: pointer;
+                    font-size: .75rem;
+                    background-color: transparent;
+                    border: 5px solid $Main-Color;
+                    border-radius: 20px;
+    
+                    padding: {
+                        left: 10px;
+                        right: 10px;
+                        top: 8px;
+                        bottom: 8px;
+                    }
+    
+                    ;
+    
+                    &:hover {
+                        background-color: black;
+                        color: $Main-Color;
+                        border-color: black;
+                    }
+                }
+            }
+        }
 }
 
 @media only screen and (max-width: 450px) {
