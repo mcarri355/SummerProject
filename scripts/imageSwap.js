@@ -19,10 +19,10 @@ function indexSwap() {
 
 function campSwap() {
   if (counter2 % 2 == 0) {
-    index.style.backgroundImage = 'url(././photos/camping1.jpg)';
+    index.style.backgroundImage = 'url(../../photos/camping1.jpg)';
   }
   if (counter2 % 2 == 1) {
-    index.style.backgroundImage = 'url(././photos/camping2.jpg)';
+    index.style.backgroundImage = 'url(../../photos/camping2.jpg)';
   }
   counter2++;
 }
